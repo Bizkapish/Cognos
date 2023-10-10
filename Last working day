@@ -1,0 +1,5 @@
+[Otprema].[Vreme].[Datum] = 
+if ( _day_of_week(  current_date; 1  ) = 1 ) then
+          (  _add_days( current_date;  -3 )    )   
+else
+           (   _add_days( current_date; -1 )    )
