@@ -1,0 +1,3 @@
+[Otprema].[Vreme].[Datum] >= _first_of_month ( _add_days( current_date; -1 ) )
+AND 
+[Otprema].[Vreme].[Datum] <= _last_of_month ( _add_days( current_date; -1 ) )  
