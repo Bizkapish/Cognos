@@ -1,0 +1,4 @@
+[Otprema].[Vreme].[Datum] >= 
+IF ( EXTRACT( month, current_date ) = 1 AND  EXTRACT( day, current_date ) <= 7 ) 
+THEN  ( _add_years( _add_days ( current_date, (_day_of_year ( current_date ) * -1) + 1), -1 )      )
+ELSE (   _add_days ( current_date, (_day_of_year ( current_date ) * -1) + 1)     )
