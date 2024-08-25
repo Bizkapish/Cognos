@@ -1,5 +1,17 @@
-[Otprema].[Vreme].[Datum] >= ( IF ( _day_of_week ( current_date; 1 ) = 1 ) THEN ( _first_of_month ( _add_days( current_date; -3 ) ) )
-ELSE ( _first_of_month ( _add_days( current_date; -1 ) )  )   )
+[Otprema].[Vreme].[Datum] >=  
+IF 
+   ( _day_of_week ( current_date; 1 ) = 1 ) 
+THEN 
+   ( _first_of_month ( _add_days( current_date; -3 ) ) )
+ELSE 
+   ( _first_of_month ( _add_days( current_date; -1 ) )  )   
+
 AND 
-[Otprema].[Vreme].[Datum] <= ( IF ( _day_of_week ( current_date; 1 ) = 1 ) THEN ( _last_of_month ( _add_days( current_date; -3 ) ) )
-ELSE ( _last_of_month ( _add_days( current_date; -1 ) )  )   )
+
+[Otprema].[Vreme].[Datum] <=  
+IF 
+   ( _day_of_week ( current_date; 1 ) = 1 ) 
+THEN 
+   ( _last_of_month ( _add_days( current_date; -3 ) ) )
+ELSE 
+   ( _last_of_month ( _add_days( current_date; -1 ) )  )   
