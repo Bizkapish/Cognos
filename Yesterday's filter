@@ -1,0 +1,1 @@
+[Datum] = _add_days( CAST( #$current_timestamp#, DATE ), -1 )
