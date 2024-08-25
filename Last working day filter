@@ -1,0 +1,7 @@
+[Datum] = 
+IF 
+   ( _day_of_week ( CAST( #$current_timestamp#, DATE ), 1 ) = 1 ) 
+THEN 
+   ( _add_days( CAST( #$current_timestamp#, DATE ), -3 ) ) 
+ELSE 
+   ( _add_days( CAST( #$current_timestamp#, DATE ), -1 )  )
